@@ -3,7 +3,7 @@ $(function () {
   const $submenu = $(".submenu");
   const duration = 300;
 
-  //   gnb
+  // gnb
   $menu.on("mouseenter", function () {
     $submenu.stop().slideDown(duration);
   });
