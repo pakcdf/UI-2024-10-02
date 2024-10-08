@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+</head>
+
+<body>
+    <script>
+        let num1 = 10;
+        let num2 = 20;
+        let result;
+
+        num1++; //1씩 증가
+        num1--; //1씩 감소
+        console.log(num1);
+
+        //++연산자가 뒤에 붙는 경우, 먼저 대입 후 증가
+        result = num2++;
+        console.log(resul, num2); // 20, 21
+        //++연산자가 뒤에 붙는 경우, 먼저 증가 후 대입
+        result = ++num2;
+        console.log(resul, num2); //22, 22
+    </script>
+</body>
+
+</html>

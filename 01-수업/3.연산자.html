@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+
+<body>
+    <script>
+        // 1. 산술연산자 : 사칙연산
+        const num1 = 18;
+        const num2 = 2;
+        let result;
+
+        result = num1 + num2;
+        result = num1 - num2;
+        result = num1 * num2;
+        result = num1 / num2;
+        result = num1 % num2;
+
+        console.log(result);
+
+        // if() {} else{}
+        if (num1 % num2 == 0) {
+            console.log("짝수!");
+        } else {
+            console.log("홀수!");
+        }
+
+        // +연산자의 특이한 점: 숫자끼리는 더한다.
+        // 1. 문자 + 문자 --> 결합
+        const str1 = "강철";
+        const str2 = "부대";
+        const strResult = str1 + str2;
+        console.log(strResult + "로 입대한 진뽕이");
+
+        // 2. 문자 + 문자 --> 문자가 하나라도 끼게 되면, 문자로 변환해 버림
+        // const result2 = strResult + num1; 118
+        // const result2 = 100 + num1; //118
+        const result2 = "100" + num1; //10018
+        console.log(typeof result2);
+    </script>
+</body>
+
+</html>
