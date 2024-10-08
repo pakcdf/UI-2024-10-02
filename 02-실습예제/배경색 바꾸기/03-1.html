@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자의 선택에 따라 배경색 바꾸기</title>
+    <style>
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        .wrap {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .wrap ul li {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .wrap ul li:nth-child(1) {
+            background: #5463df;
+        }
+
+        .wrap ul li:nth-child(2) {
+            background: #4532df;
+        }
+
+        .wrap ul li:nth-child(3) {
+            background: #fee555;
+        }
+
+        .wrap ul li:nth-child(4) {
+            background: #fee344;
+        }
+
+        .wrap ul li:nth-child(5) {
+            background: #4542fd;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li data-color="#5463df">#5463df</li>
+            <li data-color="#4532df">#4532df</li>
+            <li data-color="#fee555">#fee555</li>
+            <li data-color="#fee344">#fee344</li>
+            <li data-color="#4542fd">#4542fd</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

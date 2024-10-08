@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>저장한 컬러를 순서대로 적용</title>
+</head>
+
+<body>
+    <button type="button" class="btn-change">배경색 바꾸기</button>
+
+    <script>
+        //대상을변수에 저장
+        const $body = document.body;
+        const btnChange = document.querySelector('.btn-change');
+
+        // idea!: 컬러를 저장해 놓고 하나씩 뽑아쓰자
+        const color = ['skyblue', '#f39', 'yellowgreen', "tomato", "navy"]
+        console.log(color);
+
+        // 배경색 바꾸는 방법
+        // 배열에 접근하는 방법 : 배열의 인덱스
+        $body.style.backgroundColor = color[0];
+
+        
+        //배경색 바꾸기 버튼을 클릭했을 때
+        btnChange.addEventListener('click', function () {
+            let num = 0;
+            // 숫자를 증가
+            num++;
+
+            // 문제가 되는 상활은? num이 몇 일때
+            if (num >= color.length) {
+                num = 0
+            }
+            $body.style.backgroundColor = color[num];
+        })
+        // body의 배경색 변경
+    </script>
+</body>
+
+</html>

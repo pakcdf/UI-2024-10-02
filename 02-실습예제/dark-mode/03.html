@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>체크박스 디자인 커스텀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        body.dark {
+            background: #333;
+            color: #fff;
+        }
+
+        .wrap {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3vw;
+            line-height: 1.6;
+        }
+
+        .f-row {
+            /* background: #ff5; */
+            margin-left: auto;
+            width: 67px;
+            height: 30px;
+        }
+
+        .f-row input[type="checkbox"] {
+            display: none;
+        }
+
+        .f-row input[type="checkbox"]+label {
+            display: block;
+            border: 1px solid #000;
+            background: #fff;
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+
+            /* 텍스트 날리기 */
+            text-indent: -999px;
+            overflow: hidden;
+
+            width: 70px;
+            height: 30px;
+        }
+
+        .f-row input[type="checkbox"]+label::after {
+            content: "";
+            display: block;
+            width: 26px;
+            height: 26px;
+            border: 1px solid #000;
+            border-radius: 50px;
+            background: #fff;
+
+            position: absolute;
+            top: 0;
+            left: 1px;
+
+            transition: 0.4s;
+        }
+
+        .f-row input[type="checkbox"]:checked+label::after {
+            left: 39px;
+        }
+
+        .f-row input[type="checkbox"]:checked+label {
+            background: #f59;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="f-row">
+            <input type="checkbox" id="selectMode" />
+            <label for="selectMode">Dark Mode</label>
+        </div>
+        <div class="contents">
+            <h1>감히 이해하려고?</h1>
+            <h2>그냥해</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero repellendus quas voluptates fuga nobis
+                debitis? Nam aliquid assumenda in! Laudantium fuga cum tenetur optio quibusdam voluptate a ipsum quia
+                amet.
+            </p>
+        </div>
+    </div>
+    <script>
+        const $body = document.body;
+        //   const chkBox = document.getElementById("selectMode");
+        const chkBox = document.querySelector("#selectMode");
+        chkBox.addEventListener("click", function (event) {
+            console.log(event.target.checked);
+            if (event.target.checked) {
+                $body.classList.add("dark");
+            } else {
+                $body.classList.remove("dark");
+            }
+        });
+    </script>
+</body>
+
+</html>
